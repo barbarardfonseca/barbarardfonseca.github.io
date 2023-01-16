@@ -1,8 +1,9 @@
 const propsPublicKeys = ["className", "children", "style"];
 
 function insertComponent(
-  { targetElement, component: 
-    { 
+  { 
+    targetElement, 
+    component: { 
       className = "",
       textComponent = "", 
       style = {},
@@ -11,8 +12,8 @@ function insertComponent(
     } 
   }
 ){
-  if(textComponent){
-    textComponent = textComponent.replace("{children}", "<children class=\"@children_scoped\"></children>");
+  if(textComponent && targetElement){
+    textComponent = textComponent.replace("{children}", "<span class=\"@children_scoped\"></span>");
     
     targetElement.insertAdjacentHTML("beforeend", textComponent);
     const component = targetElement.lastElementChild;
@@ -54,29 +55,43 @@ function insertComponent(
           .getElementsByClassName("@children_scoped");
 
         if(childrenScope.length){
-          strChildren.map(strChild => {
+          strChildren.forEach(strChild => {
             childrenScope[0].insertAdjacentHTML("beforeend", strChild)
+            // childrenScope[0].insertAdjacentHTML("afterend", strChild)
           });
-          componentChildren.map(compChildren => {
+
+          componentChildren.forEach(compChildren => {
             insertComponent({ 
               targetElement: childrenScope[0],
               component: compChildren
             })
           });
         }
-
-    
       }
     }
   }
+}
+
+export function removeAllChildren(){
+	const childrenNodes = document.getElementsByClassName("@children_scoped");
+	Array.from(childrenNodes).forEach((node) => node.replaceWith(...node.childNodes));
 }
 
 /**
  * @param {String} id -Id elemento para inserir 
  * @param {String | String[]} element
  */
-export default function addComponent(id, element){
-  const targetElement = document.getElementById(id);
+export default function addComponent(id = "", element){
+  let targetElement;
+  
+  if(id[0] === ".")
+    targetElement = document.getElementsByClassName(id.replace(".", ""))[0];
+  else if(id[0] === "#")
+    targetElement = document.getElementById(id.replace("#", ""));
+  else if(id[0] === "@")
+    targetElement = document.getElementsByTagName(id.replace("@", ""));
+  else
+    targetElement = document.getElementById(id);
 
   if(targetElement && element){
     if(Array.isArray(element)){
@@ -95,14 +110,6 @@ export default function addComponent(id, element){
  * @param {Object} props - props do objeto
  */
 export function createComponent({ component = "", props={} }){
-  // if(component && Object.keys(props).length){
-  //   Object.keys(props).map(key => {
-  //     if(props[key] && !propsPublicKeys.includes(key)){
-  //       component = component.replace(`{${key}}`, props[key]);
-  //     }
-  //   });
-  // }
-
   return {
     textComponent: component,
     ...props
