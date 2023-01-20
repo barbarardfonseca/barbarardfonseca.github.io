@@ -6,7 +6,7 @@ import CardSkill from "./components/CardSkill.js";
 import DashboardProject from "./components/DashboardProject.js";
 import BICard from "./components/BICard.js";
 
-/** 
+/**    
  * Lista sobre as habilidades utilizadas na ferramenta
  * Lista com título, descrição e link da imagem
  */
