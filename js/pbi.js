@@ -9,7 +9,7 @@ import AddNavBar from "./components/Navbar.js";
 
 AddNavBar();
 
-/** 
+/**    
  * Lista sobre as habilidades utilizadas na ferramenta
  * Lista com título, descrição e link da imagem
  */
