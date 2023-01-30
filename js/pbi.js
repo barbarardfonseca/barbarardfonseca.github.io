@@ -5,6 +5,9 @@ import addComponent from "./components/index.js";
 import CardSkill from "./components/CardSkill.js";
 import DashboardProject from "./components/DashboardProject.js";
 import BICard from "./components/BICard.js";
+import AddNavBar from "./components/Navbar.js";
+
+AddNavBar();
 
 /** 
  * Lista sobre as habilidades utilizadas na ferramenta

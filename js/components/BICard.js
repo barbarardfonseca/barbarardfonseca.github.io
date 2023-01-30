@@ -1,7 +1,4 @@
-import NavbarProcess from "../navbarProcess.js";
 import { createComponent } from "./index.js";
-
-NavbarProcess()
 
 /**
  * Componente de card com imagem de fundo e botão com link
