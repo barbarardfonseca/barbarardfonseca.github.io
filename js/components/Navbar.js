@@ -86,12 +86,12 @@ const AddNavBar = () => {
 							children: "Home"
 						}),
 						NavbarItem({
-							href: "#reports",
-							children: "Outros Relatórios"
-						}),
-						NavbarItem({
 							href: "#bi_tools",
 							children: "Ferramentas de BI"
+						}),
+						NavbarItem({
+							href: "#reports",
+							children: "Outros Relatórios"
 						}),
 						NavbarItem({
 							href: "#social_media",

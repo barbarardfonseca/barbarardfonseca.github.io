@@ -74,7 +74,7 @@ border-style: solid;
   background-image: url("./images/capa_index.png");
 
   /* Set a specific height */
-  height: 700px;
+  height: 500px;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: cover;
@@ -90,7 +90,7 @@ border-style: solid;
   background-image: url("./images/img_pbi.png");
 
   /* Set a specific height */
-  height: 700px;
+  height: 500px;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: cover;

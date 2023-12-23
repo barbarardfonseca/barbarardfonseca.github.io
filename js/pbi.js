@@ -59,10 +59,9 @@ addComponent("dashboardsProjects", [
   DashboardProject({
     id: "2",
     backgroundColor: "white",
-    title: "Dashboard Copa do Mundo 2022",
-    subtitle: "Desafio Copa dos Dashboards - Minhas Planilhas",
-    desc: `Análise do histórico de Copas do Mundo(1930 - 2018). Esse dashboard é
-    uma análise geral do histórico das Copas do Mundo, nele contém análises de quantidade de gols,
+    title: "Dashboard Copa do Mundo",
+    subtitle: "Análise do histórico de Copas do Mundo.",
+    desc: `Esse dashboard é uma análise geral do histórico das Copas do Mundo, nele contém análises de quantidade de gols,
     melhores seleções e jogadores, média de gols por seleção, melhores e piores seleções baseadas em
     pontos e quantidade de gols, além das maiores audiências por estádio nas finais e o histórico do
     Brasil no ranking mundial. Tudo isso permite a análise e uma visão de como a nossa seleção está
@@ -70,25 +69,11 @@ addComponent("dashboardsProjects", [
     o cartaz promocional da copa no respectivo ano.`,
     resourcesUsed: "DAX",
     dateCreation: "09/2022",
-    link: "https://app.powerbi.com/view?r=eyJrIjoiMmMxNjg1NzUtZTE2Yi00MzVhLTgwNmItMjcxNDA2YmNjODZiIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9"
-  }),
-  DashboardProject({
-    id: "3",
-    backgroundColor: "light",
-    title: "Dashboard Copa do Mundo 2022",
-    subtitle: "Desafio DataB",
-    desc: `Análise do histórico de Copas do Mundo(1930 - 2018). Esse dashboard
-    contém as análises de audiência, países participantes, países campeões entre outras análises que dão
-    uma visão geral dos países, podendo verificar se há padrões no torneio, melhores seleções ou
-    jogadores. No dashboard também são exibidas as bandeiras dos países a fim de gerar a identificação
-    com o país de origem e promover o conhecimento de outras bandeiras.`,
-    resourcesUsed: "DAX",
-    dateCreation: "10/2022",
-    link: "https://app.powerbi.com/view?r=eyJrIjoiNzVjNWI5ZDMtMzY5Yi00OTJkLWFkOTItOWFlMjFjZGYyOWQ2IiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9&pageName=ReportSection75c6c6009dd3eb0dd415"
+    link: "https://app.powerbi.com/view?r=eyJrIjoiOGZiYTEzNDgtZGQ1OS00MGQwLWFjNDktNzFjMWE4OTYxNWVhIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9"
   }),
   DashboardProject({
     id: "4",
-    backgroundColor: "white",
+    backgroundColor: "light",
     title: "Dashboard de Clientes",
     subtitle: "",
 		desc: `Dashboard de Análise de Performance de Clientes com dados fictícios.
@@ -101,7 +86,7 @@ addComponent("dashboardsProjects", [
   }),
   DashboardProject({
     id: "5",
-    backgroundColor: "light",
+    backgroundColor: "white",
     title: "Report Colaboradores",
 		subtitle: "",
     desc: "",
