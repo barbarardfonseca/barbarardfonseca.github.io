@@ -62,9 +62,7 @@ addComponent("dashboardsProjects", [
     title: "Dashboard Copa do Mundo",
     subtitle: "Análise do histórico de Copas do Mundo.",
     desc: `Esse dashboard é uma análise geral do histórico das Copas do Mundo, nele contém análises de quantidade de gols,
-    melhores seleções e jogadores, média de gols por seleção, melhores e piores seleções baseadas em
-    pontos e quantidade de gols, além das maiores audiências por estádio nas finais e o histórico do
-    Brasil no ranking mundial. Tudo isso permite a análise e uma visão de como a nossa seleção está
+    melhores seleções, média de gols, além das partidas por estádio ao redor do mundo. Tudo isso permite a análise e uma visão de como a nossa seleção está
     em comparação com os outros países e para acrescentar também é exibida a bandeira do país-sede e
     o cartaz promocional da copa no respectivo ano.`,
     resourcesUsed: "DAX",
