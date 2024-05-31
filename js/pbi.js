@@ -121,25 +121,20 @@ addComponent("bicards", [
     imageSrc: "images/img_pbi.png",
     link: "#"
   }),
-  // BICard({
-  //   label: "Metabase",
-  //   imageSrc: "images/inc-mb.png",
-  //   link: "under_construction.html",
-  //   className: "Agora posso receber minhas classes aqui 🥳",
-  //   children: [
-  //     BICard({
-  //       label: "Eu posso ser renderizado dentro do BICard 😱",
-  //       imageSrc: "images/inc-mb.png",
-  //       link: "under_construction.html",
-  //       className: "Filho tbm pode! porque não? 😁",
-  //       children: "Eu sou neto! 🫢 loop infinito? 🤔"
-  //     })
-  //   ]
-  // }),
   BICard({
     label: "Metabase",
     imageSrc: "images/inc-mb.png",
-    link: "under_construction.html"
+    link: "under_construction.html",
+    className: "Agora posso receber minhas classes aqui 🥳",
+    children: [
+      BICard({
+        label: "Eu posso ser renderizado dentro do BICard 😱",
+        imageSrc: "images/inc-mb.png",
+        link: "under_construction.html",
+        className: "Filho tbm pode! porque não? 😁",
+        children: "Eu sou neto! 🫢 loop infinito? 🤔"
+      })
+    ]
   }),
   BICard({
     label: "Tableau",
