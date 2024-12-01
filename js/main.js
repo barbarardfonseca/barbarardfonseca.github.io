@@ -14,7 +14,7 @@ addComponent("bicards", [
   BICard({
     label: "Power BI",
     imageSrc: "images/img_pbi.png",
-    link: "#"
+    link: "PBI.html"
   }),
   // BICard({
   //   label: "Metabase",

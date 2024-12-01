@@ -56,18 +56,23 @@ addComponent("dashboardsProjects", [
     dateCreation: "10/2022",
     link: "https://app.powerbi.com/view?r=eyJrIjoiNzgzNzg5ODMtOGQ2Ni00N2U5LTk3YWUtMzgyNWU5OTdiMjExIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9"
   }),
+    //link: "https://app.powerbi.com/view?r=eyJrIjoiOGZiYTEzNDgtZGQ1OS00MGQwLWFjNDktNzFjMWE4OTYxNWVhIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9"
   DashboardProject({
     id: "2",
     backgroundColor: "white",
-    title: "Dashboard Copa do Mundo",
-    subtitle: "Análise do histórico de Copas do Mundo.",
-    desc: `Esse dashboard é uma análise geral do histórico das Copas do Mundo, nele contém análises de quantidade de gols,
-    melhores seleções, média de gols, além das partidas por estádio ao redor do mundo. Tudo isso permite a análise e uma visão de como a nossa seleção está
-    em comparação com os outros países e para acrescentar também é exibida a bandeira do país-sede e
-    o cartaz promocional da copa no respectivo ano.`,
+    title: "Análise de Preços de Combustíveis",
+    subtitle: "",
+    desc: `Esse dashboard é uma análise geral do mercado de combustíveis no Brasil, 
+    contendo informações detalhadas sobre preços de venda, 
+    principais produtos comercializados, além de distribuições por estado e 
+    município. Nele, é possível acompanhar a evolução dos preços ao longo do 
+    tempo, identificar as bandeiras das revendas e visualizar os dados de forma 
+    geográfica. Tudo isso permite uma visão ampla e comparativa do comportamento do 
+    mercado de combustíveis no país, ajudando na tomada de decisões estratégicas e no 
+    entendimento das dinâmicas regionais.`,
     resourcesUsed: "DAX",
-    dateCreation: "09/2022",
-    link: "https://app.powerbi.com/view?r=eyJrIjoiOGZiYTEzNDgtZGQ1OS00MGQwLWFjNDktNzFjMWE4OTYxNWVhIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9"
+    dateCreation: "04/2023",
+    link: "https://app.powerbi.com/view?r=eyJrIjoiNjdhOTI5Y2YtMDNmOS00ZmYxLTkwZDAtZjUzZTU3MzI5YjcwIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9&pageName=ReportSection"
   }),
   DashboardProject({
     id: "4",
