@@ -16,22 +16,22 @@ AddNavBar();
 addComponent("cards-skills", [
   CardSkill({
     title: "DAX",
-    desc: "Descrição DAX",
+    desc: "Linguagem de fórmulas para análise e cálculo de dados no Power BI.",
     imageSrc: "icon/dax2.png"
   }),
   CardSkill({
     title: "Linguagem M",
-    desc: "Descrição M",
+    desc: "Linguagem usada para transformação e manipulação de dados no Power Query.",
     imageSrc: "icon/m.png"
   }),
   CardSkill({
     title: "Visualização de Dados",
-    desc: "Descrição DataViz",
+    desc: "Criação de gráficos e dashboards para análise interativa de dados.",
     imageSrc: "icon/dataviz.png"
   }),
   CardSkill({
     title: "Inteligência de Negócios",
-    desc: "Descrição BI",
+    desc: "Análise de dados para auxiliar na tomada de decisões estratégicas.",
     imageSrc: "icon/BI.png"
   }),
 ])
@@ -109,30 +109,10 @@ addComponent("bicards", [
     imageSrc: "images/img_pbi.png",
     link: "#"
   }),
-  // BICard({
-  //   label: "Metabase",
-  //   imageSrc: "images/inc-mb.png",
-  //   link: "under_construction.html",
-  //   className: "Agora posso receber minhas classes aqui 🥳",
-  //   children: [
-  //     BICard({
-  //       label: "Eu posso ser renderizado dentro do BICard 😱",
-  //       imageSrc: "images/inc-mb.png",
-  //       link: "under_construction.html",
-  //       className: "Filho tbm pode! porque não? 😁",
-  //       children: "Eu sou neto! 🫢 loop infinito? 🤔"
-  //     })
-  //   ]
-  // }),
   BICard({
     label: "Metabase",
-    imageSrc: "images/inc-mb.png",
-    link: "under_construction.html"
-  }),
-  BICard({
-    label: "Tableau",
-    imageSrc: "images/inc-tb.png",
-    link: "under_construction.html"
+    imageSrc: "images/img_mb.png",
+    link: "Metabase.html"
   }),
   BICard({
     label: "Python",

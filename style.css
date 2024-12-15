@@ -100,6 +100,23 @@ border-style: solid;
   /* background-attachment: fixed; */
 
 }
+
+.hero-image-mb {
+  
+  background-image: url("./images/img_mb.png");
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* position: static; */
+  /* background-attachment: fixed; */
+
+}
+
 .underline{
   text-decoration: underline #011826 1px;
 }
