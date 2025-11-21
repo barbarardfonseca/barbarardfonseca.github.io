@@ -281,6 +281,21 @@ border-style: solid;
 border-radius: 20px;
 border-color:#cf9b00
 }
+
+.button.is-golden {
+  background-color: #EBB922;
+  border-color: transparent;
+  color: #011826;
+  font-weight: bold;
+}
+
+.button.is-golden:hover {
+  background-color: #dca91f;
+  border-color: transparent;
+  color: #011826;
+}
+
+
 /* fim dos que eu verifiquei que usa */
 
 .incomplete-img{
