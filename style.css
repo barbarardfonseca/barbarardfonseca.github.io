@@ -328,4 +328,16 @@ border-color:#cf9b00
   font-weight: 500;
 }
 
+.photo-golden {
+  background: white;
+  padding: 20px;
+  border-radius: 22px;
+  box-shadow: 
+    0 8px 24px rgba(0,0,0,0.15),
+    0 0 12px rgba(255, 200, 0, 0.12); /* brilho dourado sutil */
+  display: inline-block;
+}
+.photo-golden img {
+  border-radius: 18px;
+}
 /* fim dos que eu verifiquei que usa */
