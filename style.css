@@ -69,37 +69,57 @@ border-style: solid;
     /* position: relative; */
 }
 .hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  
-  background-image: url("./images/capa_index.png");
-
-  /* Set a specific height */
-  height: 500px;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: cover;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  /* position: static; */
-  /* background-attachment: fixed; */
-
+  background: linear-gradient(to bottom, #011826 0%, #163256 71%, #2A4B86 90%);
+  position: relative; /* Necessário para posicionar os elementos filhos */
+  overflow: hidden; /* Evita que elementos saiam para fora */
+}
+.hero-line-graph {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Altura da área do gráfico */
+  z-index: 0;
+}
+.hero-graph {
+  position: absolute;
+  bottom: -20px; /* Ajuste para posicionar corretamente */
+  right: 0;
+  width: 400px; /* Tamanho do gráfico */
+  opacity: 0.9;
 }
 .hero-image-pbi {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  
-  background-image: url("./images/img_pbi.png");
-
-  /* Set a specific height */
-  height: 500px;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: cover;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  /* position: static; */
-  /* background-attachment: fixed; */
-
+  background: linear-gradient(to bottom, #011826 0%, #163256 71%, #2A4B86 90%);
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important; /* Remove o padding padrão do Bulma */
 }
+.hero-icon-single-pbi {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1); /* Translada e inverte horizontalmente */
+  width: 350px; /* Tamanho grande para o ícone */
+  height: auto;
+  opacity: 1.0; /* Remove a transparência, deixando o ícone totalmente visível */
+}
+.hero-icons-left {
+  position: absolute;
+  left: 3vw; /* Distância da borda esquerda */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Espaço entre os ícones */
+}
+
+.hero-icons-left img {
+  width: 72px; /* Tamanho dos ícones */
+  height: 72px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
 
 .hero-image-mb {
   
@@ -293,6 +313,26 @@ border-color:#cf9b00
   background-color: #dca91f;
   border-color: transparent;
   color: #011826;
+}
+
+.navbar.is-custom-blue {
+  background-color: #0a2c40;
+}
+
+.hero-index-spacing {
+  padding-bottom: 2.5rem !important; /* Adiciona espaço inferior apenas no index */
+}
+
+/* Estilos para os itens da navbar personalizada */
+.navbar.is-custom-blue .navbar-item,
+.navbar.is-custom-blue .navbar-link {
+  color: rgba(255, 255, 255, 0.8); /* Branco suave para o estado padrão */
+}
+
+.navbar.is-custom-blue .navbar-item:hover,
+.navbar.is-custom-blue .navbar-link:hover {
+  color: #EBB922; /* Cor dourada no hover */
+  background-color: transparent; /* Remove o fundo cinza padrão do Bulma no hover */
 }
 
 
