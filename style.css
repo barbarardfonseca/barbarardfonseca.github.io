@@ -122,21 +122,20 @@ border-style: solid;
 
 
 .hero-image-mb {
-  
-  background-image: url("./images/img_mb.png");
-
-  /* Set a specific height */
-  height: 500px;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: cover;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  /* position: static; */
-  /* background-attachment: fixed; */
-
+  background: linear-gradient(to bottom, #011826 0%, #163256 71%, #2A4B86 90%);
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important; /* Remove o padding padrão do Bulma */
 }
-
+.hero-icon-single-mb {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1); /* Translada e inverte horizontalmente */
+  width: 350px; /* Tamanho do ícone */
+  height: auto; /* Mantém a proporção */
+  opacity: 1.0; /* Remove a transparência, deixando o ícone totalmente visível */
+}
 .underline{
   text-decoration: underline #011826 1px;
 }
@@ -355,32 +354,38 @@ border-color:#cf9b00
   background-color: rgba(0, 0, 0, 0);
 }
 
-.p-card{
-  border: 1px solid rgb(183, 175, 175);
-  border-radius: 5%;
-  padding: 8px;
-  width: 180px;
-  height: 250px;
+.p-card {
+  background-color: #ffffff; /* Fundo branco */
+  border-radius: 8px; /* Bordas levemente arredondadas */
+  padding: 2rem 1.5rem;
+  text-align: center;
+  height: 100%; /* Garante que todos os cards na mesma linha tenham a mesma altura */
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid #EBB922; /* Borda superior dourada */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra sutil para destacar do fundo */
   transition: all .5s;
-  margin: auto;
 }
 
-.p-card:hover{
-  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+.p-card:hover {
+  transform: translateY(-8px); /* Efeito de elevação */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada no hover */
 }
 
 .p-card > img {
-  width: 45px;
+  width: 60px; /* Ícone maior */
   height: auto;
+  margin: 0 auto 1.5rem auto; /* Centraliza e adiciona espaço abaixo */
 }
 
 .p-card > p {
-  justify-content: start;
+  color: #4a4a4a; /* Cinza escuro para boa legibilidade */
 }
 
 .p-card > .is-size-5 {
-  font-size: 1rem;
-  font-weight: 500;
+  color: #011826; /* Título em azul escuro do tema */
+  font-weight: 600;
+  margin-bottom: 0.75rem;
 }
 
 .photo-golden {
