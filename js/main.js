@@ -23,8 +23,8 @@ addComponent("bicards", [
   }),
   BICard({
     label: "Python",
-    imageSrc: "images/inc-py.png",
-    link: "under_construction.html"
+    imageSrc: "images/img_py.png",
+    link: "python_page.html"
   }),
 ])
 
