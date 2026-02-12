@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bárbara Fonseca | Projetos Python</title>
+    
+    <!-- Bulma & Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    
+    <!-- Navbar Script -->
+    <script type="module" defer src="./js/main.js"></script>
+    <script type="module" defer src="./js/python.js"></script>
+
+    <style>
+        body { background-color: #ffffff; font-family: 'Segoe UI', sans-serif; }
+        
+        /* Sidebar styling to match Bulma context */
+        .sidebar-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .sidebar-box label { font-size: 0.85rem; font-weight: 600; margin-top: 10px; display: block; color: #363636; }
+        
+        /* KPI Cards */
+        .kpi-card { background: white; border-radius: 8px; padding: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; height: 100%; }
+        .kpi-value { font-size: 1.4rem; font-weight: bold; margin: 5px 0; }
+        .kpi-label { font-size: 0.75rem; color: #6c757d; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Charts */
+        .chart-box { background: white; border-radius: 8px; padding: 10px; margin-bottom: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+        .chart-title { font-size: 1rem; font-weight: 600; color: #343a40; margin-bottom: 10px; border-bottom: 2px solid #f0f2f5; padding-bottom: 5px; }
+
+        /* Skill Cards */
+        .skill-card {
+            border-top: 4px solid #EBB922;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body> 
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar is-custom-blue" style="position: fixed; width: 100%; top: 0; z-index: 1000;" role="navigation" aria-label="main navigation"></nav>
+<div style="height: 52px;"></div>
+
+<!-- imagem capa -->
+<section class="hero is-large hero-image-pbi" style="height: 500px;">
+    <div class="hero-body has-text-centered">
+        <img src="icon/python.svg" class="hero-icon-single-pbi" alt="Ícone Python">
+        <p class="title is-2 has-text-white">Portfólio de Python</p>
+        <p class="subtitle is-5 has-text-white"></p> <!-- Análise de dados históricos (1980-2023) -->
+    </div>
+</section>
+
+
+<!-- Habilidades Utilizadas -->
+<div class="container is-fluid mt-6 has-text-centered">
+    <div class="notification is-white">
+        <h3 class="title is-3 underline">
+            <p class="title-color">Habilidades Utilizadas</p>
+        </h3>
+    </div>
+</div>
+
+<!--skills-->
+		<div id="cards-skills" class="columns is-desktop is-vcentered">
+			<!-- JS completa os cards -->
+		</div>
+	<!--fim skills-->
+
+
+<div class="notification is-light">
+        <div class="container mb-5">
+            <h1 class="title has-text-centered">Análise de Histórico Meteorológico</h1>
+            <h2 class="subtitle has-text-centered"></h2>
+            <div class="content has-text-justified" style="max-width: 960px; margin: 0 auto;">
+                <p>
+                    Este dashboard apresenta uma análise detalhada dos dados climáticos históricos do Brasil, abrangendo o período de 2016 a 2026.
+                    O objetivo é identificar padrões de aquecimento global, sazonalidade e variações regionais de temperatura.
+                </p>
+                <h6>Funcionalidades:</h6>
+                <ul>
+                    <li>Filtros dinâmicos por Estado, Cidade e Período.</li>
+                    <li>Indicadores de temperatura média, máxima e mínima.</li>
+                    <li>Gráficos interativos de tendência e evolução temporal.</li>
+                </ul>
+                <p><strong>Recursos Utilizados:</strong> Python <br> <strong>Criação:</strong> 02/2026</p>
+            </div>
+        </div>
+        <div class="container">
+              <!--bi limitado-->
+            <!-- Filtros (Horizontal) -->
+                    <div class="box mb-3">
+                        <h4 class="title is-6 mb-2">🌦️ Filtros</h4>
+                        <div class="columns is-multiline is-mobile is-vcentered">
+                            <div class="column">
+                                <label class="label is-small">Estado (UF)</label>
+                                <div class="select is-small is-fullwidth">
+                                    <select id="selEstado" onchange="atualizarCidades()">
+                                        <option value="TODOS">Todos</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label is-small">Cidade</label>
+                                <div class="select is-small is-fullwidth">
+                                    <select id="selCidade" onchange="aplicarFiltros()">
+                                        <option value="TODAS">Todas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label class="label is-small">Ano Início</label>
+                                <input type="number" id="anoInicio" class="input is-small" style="width: 100%;" onchange="aplicarFiltros()">
+                            </div>
+                            <div class="column">
+                                <label class="label is-small">Ano Fim</label>
+                                <input type="number" id="anoFim" class="input is-small" style="width: 100%;" onchange="aplicarFiltros()">
+                            </div>
+                            <div class="column">
+                                <label class="label is-small">Mês</label>
+                                <div class="select is-small is-fullwidth">
+                                    <select id="selMes" onchange="aplicarFiltros()">
+                                        <option value="TODOS">Todos</option>
+                                        <option value="1">Jan</option><option value="2">Fev</option><option value="3">Mar</option>
+                                        <option value="4">Abr</option><option value="5">Mai</option><option value="6">Jun</option>
+                                        <option value="7">Jul</option><option value="8">Ago</option><option value="9">Set</option>
+                                        <option value="10">Out</option><option value="11">Nov</option><option value="12">Dez</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div id="info-status" class="is-size-7 has-text-info has-text-right mt-4">Carregando...</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KPIs -->
+                    <div class="columns is-multiline mb-1 is-variable is-2">
+                                <div class="column is-3"><div class="kpi-card"><div class="kpi-label">Temp. Média Geral</div><div id="kpi-media" class="kpi-value has-text-dark">--</div></div></div>
+                                <div class="column is-3"><div class="kpi-card"><div class="kpi-label">Máxima Registrada</div><div id="kpi-max" class="kpi-value has-text-danger">--</div></div></div>
+                                <div class="column is-3"><div class="kpi-card"><div class="kpi-label">Mínima Registrada</div><div id="kpi-min" class="kpi-value has-text-link">--</div></div></div>
+                                <div class="column is-3"><div class="kpi-card"><div class="kpi-label">Tendência (Década)</div><div id="kpi-tendencia" class="kpi-value has-text-warning-dark">--</div></div></div>
+                    </div>
+
+                    <!-- Gráficos Linha 1 -->
+                    <div class="columns is-variable is-2 mb-1">
+                                <div class="column is-6">
+                                    <div class="chart-box">
+                                        <div class="chart-title">📈 O Brasil está aquecendo? (Média Anual + Tendência)</div>
+                                        <div id="graficoTendencia" style="height: 250px;"></div>
+                                    </div>
+                                </div>
+                                <div class="column is-6">
+                                    <div class="chart-box">
+                                        <div class="chart-title">📅 Sazonalidade (Média Mensal)</div>
+                                        <div id="graficoSazonalidade" style="height: 250px;"></div>
+                                    </div>
+                                </div>
+                    </div>
+
+                    <!-- Gráficos Linha 2 -->
+                    <div class="columns is-variable is-2">
+                                <div class="column is-6">
+                                    <div class="chart-box">
+                                        <div class="chart-title">📊 Comparativo por Estado (Média de Temperatura)</div>
+                                        <div id="graficoEstados" style="height: 250px;"></div>
+                                    </div>
+                                </div>
+                                <div class="column is-6">
+                                    <div class="chart-box">
+                                        <div class="chart-title">⏱️ Evolução Temporal Detalhada</div>
+                                        <div id="graficoEvolucao" style="height: 250px;"></div>
+                                    </div>
+                                </div>
+                    </div>
+
+            <!-- fim bi limitado-->
+          </div>
+</div>
+
+<!-- Footer -->
+<footer id="social_media" class="footer background">
+  <div class="content ml-6">
+    <div class="columns is-desktop is-vcentered">
+      <div class="column">
+        <h3 class="has-text-white">Redes Sociais </h3>
+        <br>
+        <a href="https://www.linkedin.com/in/b%C3%A1rbara-rohr-decoth%C3%A9-fonseca-272b00128/" target="_blank">
+          <img src="icon/lin(2).png" alt="ícone do LinkedIn" /></a>
+        <a href="https://github.com/barbarardfonseca" target="_blank"><img src="icon/github.png" alt="ícone do GitHub" /></a>
+      </div>
+      <div class="column has-text-right-desktop has-text-centered-mobile mr-6">
+        <p class="has-text-white">Desenvolvido por Bárbara Fonseca</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+    let dadosCompletos = [];
+    let dadosFiltrados = [];
+
+    // --- CAMPO PARA INJEÇÃO DE DADOS PELO PYTHON ---
+    const DADOS_EMBUTIDOS = null; 
+    // -----------------------------------------------
+
+    // Inicialização
+    if (DADOS_EMBUTIDOS) {
+        iniciarDashboard(DADOS_EMBUTIDOS);
+    } else {
+        document.getElementById('info-status').innerHTML = "⚠️ Modo Template: Execute o script Python para gerar o dashboard com dados.";
+    }
+
+    function iniciarDashboard(data) {
+        dadosCompletos = data;
+        
+        // 1. Popular Filtro de Estados
+        const estados = [...new Set(data.map(d => d.state))].sort();
+        const selEstado = document.getElementById('selEstado');
+        estados.forEach(uf => {
+            let opt = document.createElement('option');
+            opt.value = uf; opt.textContent = uf;
+            selEstado.appendChild(opt);
+        });
+
+        // 2. Configurar Anos (Min/Max)
+        const anos = data.map(d => parseInt(d.date.substring(0,4)));
+        const minAno = Math.min(...anos);
+        const maxAno = Math.max(...anos);
+        document.getElementById('anoInicio').value = minAno;
+        document.getElementById('anoFim').value = maxAno;
+
+        // 3. Inicializar
+        atualizarCidades(); // Popula cidades
+        aplicarFiltros();   // Renderiza tudo
+        document.getElementById('info-status').innerHTML = `✅ ${data.length.toLocaleString()} registros carregados.`;
+    }
+
+    function atualizarCidades() {
+        const uf = document.getElementById('selEstado').value;
+        const selCidade = document.getElementById('selCidade');
+        selCidade.innerHTML = '<option value="TODAS">Todas as Cidades</option>';
+        
+        const cidadesFiltradas = (uf === "TODOS") 
+            ? [...new Set(dadosCompletos.map(d => d.city))].sort()
+            : [...new Set(dadosCompletos.filter(d => d.state === uf).map(d => d.city))].sort();
+
+        cidadesFiltradas.forEach(c => {
+            let opt = document.createElement('option');
+            opt.value = c; opt.textContent = c;
+            selCidade.appendChild(opt);
+        });
+        aplicarFiltros();
+    }
+
+    function aplicarFiltros() {
+        const uf = document.getElementById('selEstado').value;
+        const cidade = document.getElementById('selCidade').value;
+        const anoIni = parseInt(document.getElementById('anoInicio').value);
+        const anoFim = parseInt(document.getElementById('anoFim').value);
+        const mes = document.getElementById('selMes').value;
+
+        dadosFiltrados = dadosCompletos.filter(d => {
+            const ano = parseInt(d.date.substring(0,4));
+            const mesData = parseInt(d.date.substring(5,7));
+            
+            const matchUF = (uf === "TODOS") || (d.state === uf);
+            const matchCidade = (cidade === "TODAS") || (d.city === cidade);
+            const matchAno = (ano >= anoIni && ano <= anoFim);
+            const matchMes = (mes === "TODOS") || (mesData == mes);
+
+            return matchUF && matchCidade && matchAno && matchMes;
+        });
+
+        calcularKPIs();
+        desenharGraficos();
+    }
+
+    function calcularKPIs() {
+        if (dadosFiltrados.length === 0) return;
+
+        const tempsMax = dadosFiltrados.map(d => d.temp_max).filter(v => v !== null);
+        const tempsMin = dadosFiltrados.map(d => d.temp_min).filter(v => v !== null);
+        const tempsMedia = dadosFiltrados.map(d => (d.temp_max + d.temp_min)/2).filter(v => v !== null);
+
+        const mediaGeral = tempsMedia.reduce((a,b)=>a+b,0) / tempsMedia.length;
+        const maxAbsoluta = Math.max(...tempsMax);
+        const minAbsoluta = Math.min(...tempsMin);
+
+        document.getElementById('kpi-media').innerText = mediaGeral.toFixed(1) + "°C";
+        document.getElementById('kpi-max').innerText = maxAbsoluta.toFixed(1) + "°C";
+        document.getElementById('kpi-min').innerText = minAbsoluta.toFixed(1) + "°C";
+    }
+
+    function desenharGraficos() {
+        if (dadosFiltrados.length === 0) return;
+
+        // --- 1. TENDÊNCIA ANUAL (Aquecimento) ---
+        const dadosPorAno = {};
+        dadosFiltrados.forEach(d => {
+            const ano = parseInt(d.date.substring(0,4));
+            if(!dadosPorAno[ano]) dadosPorAno[ano] = {soma:0, count:0};
+            dadosPorAno[ano].soma += (d.temp_max + d.temp_min)/2;
+            dadosPorAno[ano].count++;
+        });
+
+        const anos = Object.keys(dadosPorAno).sort();
+        const mediasAnuais = anos.map(a => dadosPorAno[a].soma / dadosPorAno[a].count);
+        
+        // Regressão Linear Simples
+        const n = anos.length;
+        const x = anos.map(Number);
+        const y = mediasAnuais;
+        const sumX = x.reduce((a,b)=>a+b,0), sumY = y.reduce((a,b)=>a+b,0);
+        const sumXY = x.reduce((a,b,i)=>a+b*y[i],0), sumXX = x.reduce((a,b)=>a+b*b,0);
+        const slope = (n*sumXY - sumX*sumY) / (n*sumXX - sumX*sumX);
+        const intercept = (sumY - slope*sumX) / n;
+        
+        // Extensão da tendência (+5 anos)
+        const maxAnoDados = Math.max(...x);
+        const anosEstendidos = [...x];
+        for(let i=1; i<=5; i++) anosEstendidos.push(maxAnoDados + i);
+        const trendLine = anosEstendidos.map(val => slope*val + intercept);
+
+        // KPI de Tendência
+        const tendenciaDecada = (slope * 10).toFixed(2);
+        const sinal = slope > 0 ? "+" : "";
+        document.getElementById('kpi-tendencia').innerText = `${sinal}${tendenciaDecada}°C / 10 anos`;
+
+        Plotly.newPlot('graficoTendencia', [
+            { x: x, y: mediasAnuais, type: 'scatter', mode: 'lines+markers', name: 'Média Anual', line: {color: '#34495e'} },
+            { x: anosEstendidos, y: trendLine, type: 'scatter', mode: 'lines', name: 'Tendência (+5 anos)', line: {color: '#e74c3c', dash: 'dot'} }
+        ], { margin: {t:10, l:40, r:10, b:30} }, {responsive: true});
+
+        // --- 2. SAZONALIDADE (Média Mensal) ---
+        const dadosPorMes = Array(12).fill(0).map(() => ({soma:0, count:0}));
+        dadosFiltrados.forEach(d => {
+            const mes = parseInt(d.date.substring(5,7)) - 1;
+            dadosPorMes[mes].soma += (d.temp_max + d.temp_min)/2;
+            dadosPorMes[mes].count++;
+        });
+        const mediasMensais = dadosPorMes.map(m => m.count ? m.soma/m.count : null);
+        
+        Plotly.newPlot('graficoSazonalidade', [{
+            x: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+            y: mediasMensais, type: 'bar', marker: {color: '#3498db'}
+        }], { margin: {t:10, l:40, r:10, b:30} }, {responsive: true});
+
+        // --- 3. COMPARATIVO ESTADOS ---
+        const dadosPorEstado = {};
+        dadosFiltrados.forEach(d => {
+            if(!dadosPorEstado[d.state]) dadosPorEstado[d.state] = {soma:0, count:0};
+            dadosPorEstado[d.state].soma += (d.temp_max + d.temp_min)/2;
+            dadosPorEstado[d.state].count++;
+        });
+        const estados = Object.keys(dadosPorEstado).sort((a,b) => (dadosPorEstado[b].soma/dadosPorEstado[b].count) - (dadosPorEstado[a].soma/dadosPorEstado[a].count));
+        const mediasEstados = estados.map(e => dadosPorEstado[e].soma / dadosPorEstado[e].count);
+
+        Plotly.newPlot('graficoEstados', [{
+            x: estados, y: mediasEstados, type: 'bar', marker: {color: '#1abc9c'}
+        }], { margin: {t:10, l:40, r:10, b:50} }, {responsive: true});
+
+        // --- 4. EVOLUÇÃO TEMPORAL (Agrupada) ---
+        // Se tiver muitas cidades, agrupa pela média do dia para não travar
+        const dadosPorData = {};
+        dadosFiltrados.forEach(d => {
+            if(!dadosPorData[d.date]) dadosPorData[d.date] = {somaMax:0, somaMin:0, count:0};
+            dadosPorData[d.date].somaMax += d.temp_max;
+            dadosPorData[d.date].somaMin += d.temp_min;
+            dadosPorData[d.date].count++;
+        });
+        const datas = Object.keys(dadosPorData).sort();
+        const serieMax = datas.map(dt => dadosPorData[dt].somaMax / dadosPorData[dt].count);
+        const serieMin = datas.map(dt => dadosPorData[dt].somaMin / dadosPorData[dt].count);
+
+        Plotly.newPlot('graficoEvolucao', [
+            { x: datas, y: serieMax, name: 'Máxima Média', line: {color: '#e74c3c', width: 1} },
+            { x: datas, y: serieMin, name: 'Mínima Média', line: {color: '#3498db', width: 1} }
+        ], { margin: {t:10, l:40, r:10, b:30} }, {responsive: true});
+    }
+</script>
+</body>
+</html>
