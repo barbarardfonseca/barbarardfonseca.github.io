@@ -49,7 +49,7 @@ addComponent("dashboardsProjects", [
     desc: `Esse dashboard apresenta a previsão meteorológica detalhada para cidades do Brasil, permitindo acompanhar de forma rápida e prática como está o clima na sua região. O relatório reúne informações de temperatura, sensação térmica, volume e probabilidade de chuva, além de cruzar o índice UV com as horas de sol. Com indicadores de vento, rajadas e resumo das condições dia a dia, o painel oferece uma visão completa e interativa do tempo para planejar a sua rotina.`,
     resourcesUsed: "DAX, Modelagem de Dados, Visualização de Dados",
     dateCreation: "08/2024",
-    link: "https://app.powerbi.com/reportEmbed?reportId=16cba141-0707-47ae-8d5b-b03adf171bd0&autoAuth=true&ctid=c4c10683-ddc8-4393-a7e5-c2ee0f433d61"
+    link: "https://app.powerbi.com/view?r=eyJrIjoiYmJjNzhmZDItZjZlYS00MDc3LTgzZmItODE2YmU1YmJiNmQzIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9"
   }),
   DashboardProject({
     id: "2",
