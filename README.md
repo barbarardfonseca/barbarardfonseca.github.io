@@ -34,11 +34,12 @@
 +O site é dividido em seções dedicadas a cada tecnologia principal:
 +
 +### 1. Power BI
-+Apresentação de relatórios focados em storytelling e visualização de dados avançada.
-+- **Dashboard Pokémon:** Um projeto criativo focado em UI/UX, fugindo dos padrões corporativos para criar uma experiência imersiva (Desafio DataB).
++Apresentação de relatórios focados em storytelling, análise preditiva e inteligência de negócios.
++- **Inteligência Climática:** Previsão meteorológica detalhada para cidades brasileiras, reunindo indicadores de temperatura, chuva, vento, rajadas e índice UV.
++- **Dashboard de Clientes:** Análise de CRM, receita, ticket médio e segmentação (Matriz de Ação).
 +- **Análise de Combustíveis:** Monitoramento de preços e distribuição geográfica de revendas no Brasil.
-+- **Dashboard de Clientes:** Análise de CRM, ticket médio e segmentação (RFM).
 +- **Dashboard de RH:** Análise de quadro de colaboradores e indicadores de gente e gestão.
++- **Dashboard Pokémon:** Um projeto criativo focado em UI/UX, fugindo dos padrões corporativos para criar uma experiência imersiva (Desafio DataB).
 +
 +### 2. Metabase & SQL
 +Demonstração de habilidades em consultas SQL e construção de perguntas nativas.

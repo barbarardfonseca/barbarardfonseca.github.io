@@ -16,7 +16,7 @@ import { createComponent } from "./index.js";
 export default function DashboardProject(props) {
   return createComponent({
     component: `
-      <!--Dash ${props.idNumber}-->
+      <!--Dash ${props.id || props.idNumber}-->
       <div class="notification is-${props.backgroundColor}">
         <div class="columns is-desktop">
           <div class="column">
@@ -33,14 +33,14 @@ export default function DashboardProject(props) {
           </div>
           <div class="column">
             <figure class="image is-5by3">
-              <iframe class="has-ratio" title="dash pokémon"
+              <iframe class="has-ratio" title="${props.title}"
                 src="${props.link}"
                 frameborder="0" allowFullScreen="true"></iframe>
             </figure>
           </div>
         </div>
       </div>
-      <!--end Dash ${props.idNumber}->
+      <!--end Dash ${props.id || props.idNumber}-->
     `, props
   })
 }

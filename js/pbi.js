@@ -44,60 +44,53 @@ addComponent("dashboardsProjects", [
   DashboardProject({
     id: "1",
     backgroundColor: "light",
-    title: "Dashboard Pokémon",
-    subtitle: "Desafio DataB",
-    desc: `Dashboard de análise dos principais status de pokémons. O objetivo
-    desse dashboard é trazer o detalhamento de informações de cada pokémon, como status, status
-    especiais, tipo, evoluções e suas variações. O modelo desse dashboard fugiu do padrão de análise
-    de dados comum, tendo como principal foco a identidade visual que se assemelhe ao padrão de
-    Pokémon e a interação com o dashboard, de modo que o usuário tenha a liberdade de explorar e
-    saber as principais informações sobre seus pokémons favoritos.`,
-    resourcesUsed: "Dax",
-    dateCreation: "10/2022",
-    link: "https://app.powerbi.com/view?r=eyJrIjoiNzgzNzg5ODMtOGQ2Ni00N2U5LTk3YWUtMzgyNWU5OTdiMjExIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9"
+    title: "Inteligência Climática",
+    subtitle: "Previsão Meteorológica nas Cidades do Brasil",
+    desc: `Esse dashboard apresenta a previsão meteorológica detalhada para cidades do Brasil, permitindo acompanhar de forma rápida e prática como está o clima na sua região. O relatório reúne informações de temperatura, sensação térmica, volume e probabilidade de chuva, além de cruzar o índice UV com as horas de sol. Com indicadores de vento, rajadas e resumo das condições dia a dia, o painel oferece uma visão completa e interativa do tempo para planejar a sua rotina.`,
+    resourcesUsed: "DAX, Modelagem de Dados, Visualização de Dados",
+    dateCreation: "08/2024",
+    link: "https://app.powerbi.com/reportEmbed?reportId=16cba141-0707-47ae-8d5b-b03adf171bd0&autoAuth=true&ctid=c4c10683-ddc8-4393-a7e5-c2ee0f433d61"
   }),
-    //link: "https://app.powerbi.com/view?r=eyJrIjoiOGZiYTEzNDgtZGQ1OS00MGQwLWFjNDktNzFjMWE4OTYxNWVhIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9"
   DashboardProject({
     id: "2",
     backgroundColor: "white",
+    title: "Dashboard de Clientes",
+    subtitle: "",
+    desc: `Dashboard de Análise de Performance de Clientes com dados fictícios. As análises trazem informações de receita, ticket médio e outros insights que auxiliam na tomada de decisão do negócio e facilitam a visualização de clientes fiéis ou que precisam ser desenvolvidos como exemplificado na Matriz de Ação.`,
+    resourcesUsed: "DAX",
+    dateCreation: "08/2022",
+    link: "https://app.powerbi.com/view?r=eyJrIjoiZWYxNTZmMDMtYzk2ZS00M2E4LTljZDQtY2QxMWUxOWE2NjZlIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9&pageName=ReportSection"
+  }),
+  DashboardProject({
+    id: "3",
+    backgroundColor: "light",
     title: "Análise de Preços de Combustíveis",
     subtitle: "",
-    desc: `Esse dashboard é uma análise geral do mercado de combustíveis no Brasil, 
-    contendo informações detalhadas sobre preços de venda, 
-    principais produtos comercializados, além de distribuições por estado e 
-    município. Nele, é possível acompanhar a evolução dos preços ao longo do 
-    tempo, identificar as bandeiras das revendas e visualizar os dados de forma 
-    geográfica. Tudo isso permite uma visão ampla e comparativa do comportamento do 
-    mercado de combustíveis no país, ajudando na tomada de decisões estratégicas e no 
-    entendimento das dinâmicas regionais.`,
+    desc: `Esse dashboard é uma análise geral do mercado de combustíveis no Brasil, contendo informações detalhadas sobre preços de venda, principais produtos comercializados, além de distribuições por estado e município. Nele, é possível acompanhar a evolução dos preços ao longo do tempo, identificar as bandeiras das revendas e visualizar os dados de forma geográfica. Tudo isso permite uma visão ampla e comparativa do comportamento do mercado de combustíveis no país, ajudando na tomada de decisões estratégicas e no entendimento das dinâmicas regionais.`,
     resourcesUsed: "DAX",
     dateCreation: "04/2023",
     link: "https://app.powerbi.com/view?r=eyJrIjoiNjdhOTI5Y2YtMDNmOS00ZmYxLTkwZDAtZjUzZTU3MzI5YjcwIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9&pageName=ReportSection"
   }),
   DashboardProject({
     id: "4",
-    backgroundColor: "light",
-    title: "Dashboard de Clientes",
+    backgroundColor: "white",
+    title: "Report Colaboradores",
     subtitle: "",
-		desc: `Dashboard de Análise de Performance de Clientes com dados fictícios.
-		As análises trazem informações de receita, ticket médio e outros insights que auxiliam na tomada de
-		decisão do negócio e facilitam a visualização de clientes fiéis ou que precisam ser desenvolvidos
-		como exemplificado na Matriz de Ação.`,
-		resourcesUsed: "",
-		dateCreation: "08/2022",
-		link: "https://app.powerbi.com/view?r=eyJrIjoiZWYxNTZmMDMtYzk2ZS00M2E4LTljZDQtY2QxMWUxOWE2NjZlIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9&pageName=ReportSection"			
+    desc: `Painel analítico voltado à gestão de Recursos Humanos e People Analytics. Apresenta o acompanhamento do quadro de colaboradores, distribuição por áreas, movimentações e métricas organizacionais essenciais para apoiar lideranças e o RH em decisões estratégicas de gestão de talentos.`,
+    resourcesUsed: "DAX",
+    dateCreation: "03/2022",
+    link: "https://app.powerbi.com/view?r=eyJrIjoiYWUxNTZjNGItOWFhYi00MDFhLWJmNTYtNGVlZDVjZjRiZDk4IiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9&pageName=ReportSection90fe854a9eb8d4888de0"
   }),
   DashboardProject({
     id: "5",
-    backgroundColor: "white",
-    title: "Report Colaboradores",
-		subtitle: "",
-    desc: "",
-		resourcesUsed: "",
-    dateCreation: "03/2022",
-		link: "https://app.powerbi.com/view?r=eyJrIjoiYWUxNTZjNGItOWFhYi00MDFhLWJmNTYtNGVlZDVjZjRiZDk4IiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9&pageName=ReportSection90fe854a9eb8d4888de0"
+    backgroundColor: "light",
+    title: "Dashboard Pokémon",
+    subtitle: "Desafio DataB",
+    desc: `Dashboard de análise dos principais status de pokémons. O objetivo desse dashboard é trazer o detalhamento de informações de cada pokémon, como status, status especiais, tipo, evoluções e suas variações. O modelo desse dashboard fugiu do padrão de análise de dados comum, tendo como principal foco a identidade visual que se assemelhe ao padrão de Pokémon e a interação com o dashboard, de modo que o usuário tenha a liberdade de explorar e saber as principais informações sobre seus pokémons favoritos.`,
+    resourcesUsed: "DAX",
+    dateCreation: "10/2022",
+    link: "https://app.powerbi.com/view?r=eyJrIjoiNzgzNzg5ODMtOGQ2Ni00N2U5LTk3YWUtMzgyNWU5OTdiMjExIiwidCI6ImM0YzEwNjgzLWRkYzgtNDM5My1hN2U1LWMyZWUwZjQzM2Q2MSJ9"
   })
-		/** Refazer capa e inserir descrição do dashboard */		
 ])
 /**
  * Lista das ferramentas de Business Intelligence utilizadas
